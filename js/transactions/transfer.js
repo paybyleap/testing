@@ -1,7 +1,7 @@
 const transfer = function (currentAccount, accounts, username, amount) {
   let reciever = accounts.find(cur => cur.username === username);
   if (!reciever) {
-    alert('No account found with this username');
+    alert('No User account found with this username');
     return;
   } else {
     if (reciever?.username === currentAccount.username) {
