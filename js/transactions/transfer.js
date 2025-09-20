@@ -10,6 +10,7 @@ const transfer = function (currentAccount, accounts, username, amount) {
     } else {
       if (
         amount >= currentAccount.transactions.reduce((acc, cur) => acc + cur, 0)
+        //2023-06-10: Changed from > to >= to prevent zero balance accounts
       ) {
         alert('Insufficient balance');
         return;
